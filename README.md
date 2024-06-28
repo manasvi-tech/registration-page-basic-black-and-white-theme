@@ -31,11 +31,15 @@ cd registration-page-basic-black-and-white-theme
 
 ```
 # Install dependencies
+```bash
 npm install
 npm install express hbs bcrypt validator mongoose
+```
 
 ## To start the application
+```bash
 npm run dev
+```
 
 
 
