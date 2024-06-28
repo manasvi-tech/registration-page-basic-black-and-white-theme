@@ -2,6 +2,7 @@ const express = require('express')
 const hbs = require('hbs');
 const app = express();
 const path = require('path');
+const bcrypt = require('bcrypt');
 const port = process.env.PORT || 3000;
 
 require("./db/conn");
@@ -30,6 +31,9 @@ app.post('/',async (req,res)=>{
             email : req.body.email,
             password : req.body.password
         })
+        //hashing before saving into database
+        // this is called concept of middleware
+        
         const registered = registerEmployee.save();
         res.status(200).render("index");
     }catch(err){
@@ -45,20 +49,25 @@ app.post('/login', async(req,res)=>{
 
         // console.log(`${email} with its ${pass}`);
         const userEmail = await Register.findOne({email:email});
-        if(pass === userEmail.password){
+        console.log(userEmail);
+
+        const isMatch = await bcrypt.compare(pass, userEmail.password)
+        console.log(isMatch);
+        if(isMatch){
             res.status(201).render("index");
         } else{
-            res.send("Invalid password");
+            res.send("Invalid details");
         }
 
     }catch(err){
-        res.status(400).send('Invalid');
+        res.status(400).send(err);
     }
 })
 
 app.get('/home',(req,res)=>{
     res.render("index");
 })
+
 
 app.listen(port,(req,res)=>{
     console.log(`server is running at ${port}`);
