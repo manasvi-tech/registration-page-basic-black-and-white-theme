@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root{
+    --var-primary-color : #2888E8FF;
+}
+
+html{
+    font-size: 53.5%;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    letter-spacing: 0.08rem;
+    font-size: 1.6rem;
+}
+
+button, input[type="submit"]{
+    border: .1rem solid #fff;
+    outline: none;
+    text-transform: capitalize;
+    padding: .6rem 1.2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 0.05rem;
+    background-color: transparent;
+    color: white
+    
+}
+
+/* now registration navbar styling */
+
+.registration-header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url("../images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+}
+
+.container{
+    height: 10vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight:bold;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+li>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* registration-page styling */
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration, .login{
+    min-height: 30vh;
+    min-width: 40vw;
+    background-color: aquamarine;
+
+}
+
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.form-text{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("../images/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 3rem 2rem;
+}
+
+.form-text p{
+    width: 30ch;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+}
+
+.form-text button{
+    background-color: #fff;
+    color: #000;
+}
+
+.form-text button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.registration-form, .login-form{
+    width: 100%;
+    min-height: 45vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.registration-form p, .login-form p{
+    margin: 1rem 0 0.7rem 0;
+}
+
+.social-icons{
+    display: flex;
+    gap:1.4rem;
+    margin: 1rem 0 0.6rem 0 ;
+
+}
+
+.fa-brands, .fa-regular{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0.1rem solid #ccc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.login .form-text{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("../images/bg4.png");
+    background-position: center;
+    background-size: cover;
+}
+
+input{
+    width: 20rem;
+    margin: 0.7rem 0;
+    border:none;
+    padding : 1rem 1.8rem;
+    letter-spacing: 0.06rem;
+    background-color: #e8e8e8;
+}
+
+input[type="submit"]{
+    margin-top: 1rem;
+    min-width: 18rem;
+    background-color: var(--var-primary-color);
+    color: #fff;
+}
+
+.registration:not(.login-section--display){
+    display: none;
+}
+
+.login-section--display .registration{
+    display:block
+}
+
+.login-section--display .login{
+    display:none
+}
+
+/* home page style */
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.header .logo {
+  font-size: 25px;
+  font-family: "Sriracha", cursive;
+  color: #000;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #000;
+  padding: 35px 20px;
+}
+

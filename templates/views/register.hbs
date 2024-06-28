@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Registration</title>
+</head>
+<body>
+    
+    <header class ="registration-header">
+        {{>navbar}}
+        <main>
+            <section class="user-container login-section--display">
+                <div class="registration">
+                    <div class="grid-two--column">
+                        <div class="form-text">
+                            <h2>Welcome Back!</h2>
+                            <p>To keep connected with us please enter your personal info</p>
+                            <button class="login-btn">Login here</button>
+                        </div>
+
+                        <div class="registration-form">
+                            <h2>Create Account</h2>
+                            <div class=social-icons>
+                                <a href="www.google.com" target="_blank">
+                                    <i class="fa-brands fa-discord"></i>
+                                </a>
+                                <a href="www.instagram.com" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="www.gmail.com" target="_blank">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </a>
+                                <a href="www.linkedin.com" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>Or use your email for registration</p>
+                            <form action="/" method="POST">
+                                <div class="input-field">
+                                    <label for="username">
+                                        <input type="text" name="username" id="usernmae" placeholder="Name">
+                                    </label>
+                                </div>
+                            
+                                <div>
+                                    <label for="Email">
+                                        <input type="email" name ="email" id="Email" placeholder="Email">
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="Password">
+                                        <input type="password" name ="password" id="Password" placeholder="Password">
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="submit" value="register">
+                                </div>
+                            
+                            </form>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="login">
+                    <div class="grid-two--column">
+                        <div class="form-text">
+                            <h2>Hello, friend</h2>
+                            <p>Enter your personal details and start your journey with us</p>
+                            <button class="registration-btn">Register here</button>
+                        </div>
+
+                        <div class="login-form">
+                            <h2>Sign-In</h2>
+                            <div class=social-icons>
+                                <a href="www.google.com" target="_blank">
+                                    <i class="fa-brands fa-discord"></i>
+                                </a>
+                                <a href="www.instagram.com" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="www.gmail.com" target="_blank">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </a>
+                                <a href="www.linkedin.com" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>Or use your account</p>
+
+                            <form action="/login" method="POST">
+                                                        
+                                <div>
+                                    <label for="Email1">
+                                        <input type="email" name ="email" id="Email1" placeholder="Email">
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="Password1">
+                                        <input type="password" name ="password" id="Password1" placeholder="password">
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <input type="submit" value="Login">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </section>
+    </main>
+    </header>
+    <script src="js/index.js"></script>
+</body> 
+</html>
