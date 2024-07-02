@@ -1,9 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const hbs = require('hbs');
 const app = express();
 const path = require('path');
 const bcrypt = require('bcrypt');
-const port = process.env.PORT || 3000;
+const jwt = require('jsonwebtoken');
+const port = process.env.PORT;
 
 require("./db/conn");
 const Register = require("./models/register");
@@ -33,6 +35,12 @@ app.post('/',async (req,res)=>{
         })
         //hashing before saving into database
         // this is called concept of middleware
+
+        //authentication and token using jwot
+        //this is also middleware
+       
+        //console.log("The success part" + registerEmployee)
+        const token = await registerEmployee.generateAuthToken(); //defined in register.js
         
         const registered = registerEmployee.save();
         res.status(200).render("index");
@@ -52,7 +60,12 @@ app.post('/login', async(req,res)=>{
         console.log(userEmail);
 
         const isMatch = await bcrypt.compare(pass, userEmail.password)
-        console.log(isMatch);
+        
+        //console.log(isMatch);
+
+        const token = await userEmail.generateAuthToken();
+        //console.log(token);
+
         if(isMatch){
             res.status(201).render("index");
         } else{
