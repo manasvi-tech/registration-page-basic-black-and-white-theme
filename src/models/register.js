@@ -31,7 +31,7 @@ const employeeSchema = new mongoose.Schema({
 //static are functions defined on the models while methods are functions defined on the instance (document)
 employeeSchema.methods.generateAuthToken = async function(){
     try{
-        console.log(this._id);
+    
         const token = jwt.sign({_id:this._id.toString()}, process.env.SECRET_KEY)  // a unique feature of each instance and a secret private key
         this.tokens  = this.tokens.concat({token:token})
         await this.save();
